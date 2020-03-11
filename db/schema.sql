@@ -1,9 +1,11 @@
-create database burgers_db;
+DROP DATABASE IF EXISTS burgers_db;
 
-    use burgers_db
+CREATE DATABASE burgers_db;
 
-    create table (
-        id primary key,
+USE burgers_db;
+
+CREATE TABLE burgers (
+        id INTEGER PRIMARY KEY,
         burger_name VARCHAR (30),
         devoured BOOLEAN NOT NULL
     );

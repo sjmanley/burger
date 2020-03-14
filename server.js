@@ -1,33 +1,24 @@
 var express = require("express");
-var exphbs = require("express-handlebars");
-var mysql = require("mysql");
+var bodyParser = require("body-parser");
 
 var app = express();
-
 var PORT = process.env.PORT || 3000;
 
+app.use(express.static("public"));
 
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use(bodyParser.json());
+
+var exphbs = require("express-handlebars");
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
+var routes = require("./controllers/burgers_controller.js");
 
-connection.connect(function(err) {
-    if (err) {
-      console.error("error connecting: " + err.stack);
-      return;
-    }
-  
-    console.log("connected as id " + connection.threadId);
-  });
+app.use(routes);
 
-  // Import routes and give the server access to them.
-// const routes = require('./controllers/burgerController.js');
-
-// app.use(routes);
-
-// app.listen(PORT, () => {
-//   console.log('App now listening at localhost:' + PORT);
-// });
+app.listen(PORT, function () {
+  console.log("Server listening on: http://localhost:" + PORT);
+});

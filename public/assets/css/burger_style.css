@@ -1,0 +1,44 @@
+.jumbotron {
+    background-image: url("https://images.hdqwalls.com/download/burger-minimalism-hd-1400x900.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-top: 10px;
+    text-align: center;
+    
+}
+
+.jumbotron > h1 {
+    font-family: 'Helvetica', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+}
+
+#newburger {
+    border-radius: 5px;
+}
+
+#color-override {
+    color: #fff;
+}
+
+#lefthead {
+    background-color: #5cb85c;
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+#eatbutton, #trashbutton {
+    float: right;
+}
+
+#righthead {
+    background-color: #f0ad4e;
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+body {
+    background-color: #8c8eff !important;
+  }

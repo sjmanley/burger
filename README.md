@@ -2,6 +2,7 @@
 <br>
 https://burgerscott.herokuapp.com/
 <br>
+<br>
 Created a "burger" logger with MySQL, Node, Express, Handlebars and a ORM. Used Node and MySQL to query and route data in the app, and Handlebars to generate the HTML.
 <br>
 <br>
